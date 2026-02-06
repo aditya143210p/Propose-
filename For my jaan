@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Propose Day Sadia ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.18);
+      padding: 45px 35px;
+      border-radius: 24px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+      max-width: 440px;
+      backdrop-filter: blur(12px);
+      animation: fadeIn 2s ease;
+      z-index: 2;
+    }
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: #fff0f4;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    button {
+      background: #ff2e63;
+      border: none;
+      padding: 14px 32px;
+      font-size: 1.05rem;
+      border-radius: 30px;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .heart {
+      position: absolute;
+      bottom: -20px;
+      color: rgba(255,255,255,0.7);
+      font-size: 20px;
+      animation: floatUp linear infinite;
+    }
+    @keyframes floatUp {
+      from { transform: translateY(0) scale(1); opacity: 1; }
+      to { transform: translateY(-110vh) scale(1.6); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Happy Propose Day 💍</h1>
+    <h2>My Love, Sadia ❤️</h2>
+    <p>
+      Sadia, tum meri zindagi ka sabse khoobsurat ehsaas ho. 
+      Tumhari muskurahat meri duniya roshan kar deti hai, 
+      aur tumhara saath har pal ko special bana deta hai.
+    </p>
+    <p>
+      Aaj Propose Day par, dil se kehna chahta hoon — 
+      kya tum meri zindagi ka hamesha ke liye hissa banogi? 💖
+    </p>
+    <button onclick="showLove()">Yes, I Love You 💘</button>
+    <p id="msg" style="display:none; margin-top:20px; font-size:1.2rem;">💞 Tum ho toh sab kuch hai, Sadia 💞<br><br><strong>— From Aditya ❤️</strong></p>
+  </div>  <script>
+    function showLove() {
+      document.getElementById('msg').style.display = 'block';
+    }
+
+    // floating hearts
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (3 + Math.random() * 4) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }, 400);
+  </script></body>
+</html>
